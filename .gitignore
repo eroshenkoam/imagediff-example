@@ -1,0 +1,7 @@
+# Idea
+.idea
+*.iml
+
+# Grade
+build
+.gradle
