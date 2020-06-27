@@ -24,8 +24,8 @@ public class VisualExample {
     public void setUp() {
         final VisualRegressionTrackerConfig config = new VisualRegressionTrackerConfig(
                 "http://localhost:4200",
-                "4ab8cf1c-9aff-41b3-bdb5-cd4a59fa3ece",
-                "Y7MC7VH2BQM1TVK6RS29NWF314P5",
+                "3b0915ac-1c6c-4493-b4dd-37be5f68520e",
+                "CYPGGX127C4WNNG5PMZ0DXA18GHP",
                 "master"
         );
 
