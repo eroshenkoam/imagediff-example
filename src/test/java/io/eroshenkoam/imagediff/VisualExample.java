@@ -17,18 +17,18 @@ import static io.eroshenkoam.imagediff.ScreenshotUtils.makeScreenshotAsString;
 
 public class VisualExample {
 
-    private VisualRegressionTracker visualRegressionTracker;
+    private final static String ENDPOINT = "http://localhost:4200";
+    private final static String PROJECT_ID = "3b0915ac-1c6c-4493-b4dd-37be5f68520e";
+    private final static String API_KEY = "CYPGGX127C4WNNG5PMZ0DXA18GHP";
+    private final static String BRANCH = "master";
 
+    private VisualRegressionTracker visualRegressionTracker;
 
     @BeforeEach
     public void setUp() {
         final VisualRegressionTrackerConfig config = new VisualRegressionTrackerConfig(
-                "http://localhost:4200",
-                "3b0915ac-1c6c-4493-b4dd-37be5f68520e",
-                "CYPGGX127C4WNNG5PMZ0DXA18GHP",
-                "master"
+                ENDPOINT, PROJECT_ID, API_KEY, BRANCH
         );
-
         visualRegressionTracker = new VisualRegressionTracker(config);
 
         WebDriverManager.chromedriver().setup();
@@ -52,14 +52,13 @@ public class VisualExample {
         );
     }
 
-
-    private TestRunOptions defaultOpts() {
-        return TestRunOptions.builder().diffTollerancePercent(0).build();
-    }
-
     @AfterEach
     public void afterEach() {
         WebDriverRunner.closeWebDriver();
+    }
+
+    private TestRunOptions defaultOpts() {
+        return TestRunOptions.builder().diffTollerancePercent(0).build();
     }
 
 }

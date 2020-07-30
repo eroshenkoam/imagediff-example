@@ -32,7 +32,6 @@ public class AllureExample {
         Configuration.browserSize = "1200x800";
     }
 
-
     @Test
     public void testFullPage() throws Exception {
         label("testType", "screenshotDiff");
