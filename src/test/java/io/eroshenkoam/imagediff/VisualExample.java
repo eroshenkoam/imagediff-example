@@ -18,8 +18,8 @@ import static io.eroshenkoam.imagediff.ScreenshotUtils.makeScreenshotAsString;
 public class VisualExample {
 
     private final static String ENDPOINT = "http://localhost:4200";
-    private final static String PROJECT_ID = "3b0915ac-1c6c-4493-b4dd-37be5f68520e";
-    private final static String API_KEY = "CYPGGX127C4WNNG5PMZ0DXA18GHP";
+    private final static String PROJECT_ID = "05c3e558-d2db-4a2c-9be7-dcc7d02e74bf";
+    private final static String API_KEY = "4BVRSTR2M34G5PG67DH16F1DWH6P";
     private final static String BRANCH = "master";
 
     private VisualRegressionTracker visualRegressionTracker;
@@ -38,7 +38,9 @@ public class VisualExample {
 
     @Test
     public void testFullPage() throws Exception {
-        final String request = "Погода в Санкт-Петербурге";
+        final String request = "Погода в Москве";
+//        final String request = "Погода в Санкт-Петербурге";
+
         open("https://yandex.ru");
 
         $("#text").sendKeys(request);

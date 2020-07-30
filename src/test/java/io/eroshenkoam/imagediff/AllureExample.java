@@ -36,7 +36,8 @@ public class AllureExample {
     public void testFullPage() throws Exception {
         label("testType", "screenshotDiff");
 
-        final String request = "Погода в Санкт-Петербурге";
+        final String request = "Погода в Москве";
+//        final String request = "Погода в Санкт-Петербурге";
         open("https://yandex.ru");
 
         $("#text").sendKeys(request);
@@ -44,7 +45,7 @@ public class AllureExample {
         $("[data-fast-wzrd='weather']").should(Condition.exist);
 
         final Screenshot actual = makeScreenshot($("[data-fast-wzrd='weather']"));
-        write(actual.getImage(), AllureExample.class, "weather");
+//        write(actual.getImage(), AllureExample.class, "weather");
 
         final BufferedImage expected = read(AllureExample.class, "weather");
 
